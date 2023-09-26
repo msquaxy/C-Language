@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+void word(char *a);
+
+main (){
+    char arr[50];
+    printf ("Input string: ");
+	gets (arr);
+	
+    word (arr);
+}
+
+void word (char *a){
+    char* i;
+    for (i=a; *i!= '\0'; i++){
+         if (*i == 'a' || *i == 'e' || *i == 'i' || *i == 'o' || *i == 'u' 
+            || *i == 'A' || *i == 'E' || *i == 'I' || *i == 'O' || *i == 'U') {
+            printf("%c - Not a Consonant\n", *i);
+        } 
+		else if (*i == ' ') {
+			printf ("\n");
+		}
+		else {
+            printf("%c - Consonant\n", *i);
+        }
+    }
+    
+    printf ("\nI love you bibi que");
+}
